@@ -1,7 +1,7 @@
 {
   "buildCommand": "cd project/tamilnadu-scheme-assistant/frontend && npm install && npm run build",
   "outputDirectory": "project/tamilnadu-scheme-assistant/frontend/dist",
-  "installCommand": "echo 'Skipping root install'",
+  "installCommand": "echo skip",
   "framework": null,
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
