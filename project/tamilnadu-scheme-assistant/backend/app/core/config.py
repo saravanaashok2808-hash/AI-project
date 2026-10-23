@@ -10,7 +10,7 @@ class Settings(BaseModel):
     PORT: int = int(os.getenv("PORT", "8000"))
     HOST: str = os.getenv("HOST", "0.0.0.0")
     ENVIRONMENT: str = os.getenv("ENVIRONMENT", "development")
-    DATABASE_PATH: Path = BASE_DIR / os.getenv("DATABASE_PATH", "../data/schemes.db")
+    DATABASE_PATH: Path = BASE_DIR / os.getenv("DATABASE_PATH", "data/schemes.db")
     CHROMA_PERSIST_DIR: Path = BASE_DIR / os.getenv("CHROMA_PERSIST_DIR", "../data/chroma_db")
     OLLAMA_BASE_URL: str = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
     OLLAMA_MODEL: str = os.getenv("OLLAMA_MODEL", "qwen2.5:3b")

@@ -15,4 +15,4 @@ services:
       - key: CORS_ORIGINS
         value: "*"
       - key: DATABASE_PATH
-        value: ../data/schemes.db
+        value: data/schemes.db
