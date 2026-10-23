@@ -1,4 +1,7 @@
-import torch
+try:
+    import torch
+except ImportError:
+    torch = None
 import logging
 import threading
 
@@ -7,7 +10,7 @@ logger = logging.getLogger(__name__)
 class RawLLM:
     def __init__(self, model_id: str = "Qwen/Qwen2.5-1.5B-Instruct"):
         self.model_id = model_id
-        self.device = "cuda" if torch.cuda.is_available() else "cpu"
+        self.device = "cuda" if (torch and torch.cuda.is_available()) else "cpu"
         self.tokenizer = None
         self.model = None
         self.is_loaded = False
@@ -16,7 +19,7 @@ class RawLLM:
 
     def load_model(self):
         """Loads the raw model into GPU memory if available; falls back to instant empathetic engine on CPU."""
-        if self.device != "cuda":
+        if torch is None or self.device != "cuda":
             logger.info("No CUDA GPU detected. Using instant empathetic helper persona (<5ms response time).")
             self.is_loaded = False
             return False

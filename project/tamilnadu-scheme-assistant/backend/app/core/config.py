@@ -8,7 +8,7 @@ load_dotenv(BASE_DIR / ".env")
 
 class Settings(BaseModel):
     PORT: int = int(os.getenv("PORT", "8000"))
-    HOST: str = os.getenv("HOST", "127.0.0.1")
+    HOST: str = os.getenv("HOST", "0.0.0.0")
     ENVIRONMENT: str = os.getenv("ENVIRONMENT", "development")
     DATABASE_PATH: Path = BASE_DIR / os.getenv("DATABASE_PATH", "../data/schemes.db")
     CHROMA_PERSIST_DIR: Path = BASE_DIR / os.getenv("CHROMA_PERSIST_DIR", "../data/chroma_db")
