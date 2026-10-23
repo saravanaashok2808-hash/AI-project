@@ -1,6 +1,6 @@
 import type { QueryRequest, QueryResponse, Scheme, SchemeEligibility, UserProfile } from '../types';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://127.0.0.1:8000';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://ai-project-792f.onrender.com';
 
 function mapBackendScheme(s: any): Scheme {
   const benefitsList = s.benefits ? Object.values(s.benefits).map(String) : [];
