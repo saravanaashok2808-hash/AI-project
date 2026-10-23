@@ -1,0 +1,10 @@
+{
+  "name": "ai-project",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix project/tamilnadu-scheme-assistant/frontend run dev",
+    "install:frontend": "cd project/tamilnadu-scheme-assistant/frontend && npm install",
+    "build": "cd project/tamilnadu-scheme-assistant/frontend && npm install && npm run build",
+    "preview": "npm --prefix project/tamilnadu-scheme-assistant/frontend run preview"
+  }
+}

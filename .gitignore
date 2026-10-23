@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+
+# Build output
+dist/
+build/
+
+# Environment
+.env
+*.env.local
+
+# Python virtual environment
+venv/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+npm-debug.log*
+
+# Database (keep the data, exclude large sqlite WAL)
+*.db-wal
+*.db-shm
+
+# Vercel
+.vercel/
+
+# Scratch/temp files
+step*.txt
+*.tmp

@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+venv/
+.venv/
+
+# Environment
+.env
+!.env.example
+
+# Database
+*.db
+*.db-wal
+*.db-shm
+
+# Vector Store
+chroma_db/
+
+# AI Models (large files)
+ai/models/*.bin
+ai/models/*.gguf
+ai/models/*.pt
+ai/models/*.onnx
+
+# Node
+node_modules/
+frontend/node_modules/
+frontend/dist/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+
+# Docker
+docker/data/
